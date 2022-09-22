@@ -15,7 +15,7 @@ Unauthenticated Remote attack
 
 
 Description/Impact:
-We have identified that the DevExpress Resource Handler (ASPxHttpHandlerModule) of "DevExpress ASP.NET Web Forms Build 19.2.3" Platform does not verify the referenced objects on the "/DXR.axd?r=" HTTP GET parameter. This leads to Insecure Direct Object References (IDOR) vulnerability. IDOR are a type of access control vulnerability that arises when an application uses parameters that can be manipulated by users to access objects directly. Therefore, the HTTP GET web parameter "/DXR.axd?r=" is vulnerable to this security issue. An authenticated malicious actor can manipulate (fuzz) the affected web parameter to leak the source code of the targeted web app. Then, the attacker can analyze the leaked source code (Whitebox Approach) to perform further attacks. An attacker can leverage this issue to identify and exploit other security issues. 
+We have identified that the DevExpress Resource Handler (ASPxHttpHandlerModule) of "DevExpress ASP.NET Web Forms Build 19.2.3" Platform does not verify the referenced objects on the "/DXR.axd?r=" HTTP GET parameter. This leads to Insecure Direct Object References (IDOR) vulnerability. IDOR are a type of access control vulnerability that arises when an application uses parameters that can be manipulated by users to access objects directly. Therefore, the HTTP GET web parameter "/DXR.axd?r=" is vulnerable to this security issue. An unauthenticated malicious actor can manipulate (fuzz) the affected web parameter to leak the source code of the targeted web app. Then, the attacker can analyze the leaked source code (Whitebox Approach) to perform further attacks. An attacker can leverage this issue to identify and exploit other security issues. 
 
 
 Evidence:
