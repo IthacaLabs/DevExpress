@@ -1,5 +1,5 @@
-Source Code Leak via IDOR
--------------------------
+Source Code Leak via IDOR - CVE-2022-41479
+------------------------------------------
 
 Vendor:
 DevExpress
